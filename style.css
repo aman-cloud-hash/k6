@@ -1248,3 +1248,87 @@ i.fa-phone {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
+
+
+/* --- Advanced Mobile Optimizations --- */
+@media (max-width: 768px) {
+    /* Reduce global paddings for sections */
+    .about, .services, .cta-section, .stats {
+        padding: 2rem 0 !important;
+    }
+    
+    footer {
+        padding: 2.5rem 0 1.5rem !important;
+    }
+
+    /* Reduce gaps in grids */
+    .about-grid, .service-card-wrapper, .footer-grid, .stats-grid {
+        gap: 2rem !important;
+    }
+
+    /* Hero section refinements */
+    .hero {
+        padding: 6rem 0 3rem !important;
+    }
+    
+    .hero-grid {
+        gap: 2rem !important;
+    }
+
+    h2 {
+        font-size: 2rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .section-header {
+        margin-bottom: 2rem !important;
+    }
+    
+    .sub-title {
+        margin-bottom: 0.5rem !important;
+    }
+
+    /* Adjust padding-top for fixed header compensation */
+    div[style*="padding-top: 8rem"], 
+    div[style*="padding-top: 6rem"] {
+        padding-top: 5rem !important;
+    }
+    
+    section[style*="padding-top: 8rem"] {
+        padding-top: 5rem !important;
+    }
+
+    .glass-card {
+        padding: 1.5rem !important;
+    }
+
+    .service-img {
+        min-height: 250px !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    /* Instagram grid spacing */
+    .instagram-grid {
+        gap: 1rem !important;
+        padding: 1rem 0 !important;
+    }
+    
+    .insta-embed {
+        min-height: 350px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.2rem !important;
+    }
+    
+    .btn {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+    
+    .glass-card {
+        padding: 1.2rem !important;
+    }
+}
