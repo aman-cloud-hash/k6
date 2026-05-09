@@ -1224,9 +1224,11 @@ i.fa-phone {
     padding: 12px 0;
     overflow: hidden;
     white-space: nowrap;
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     z-index: 20;
-    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
+    box-shadow: 0 -4px 15px rgba(46, 125, 50, 0.3);
 }
 
 .ticker-text {
