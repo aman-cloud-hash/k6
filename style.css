@@ -1215,3 +1215,34 @@ i.fa-phone {
         font-size: 1.8rem;
     }
 }
+
+/* Scrolling Ticker */
+.scrolling-ticker {
+    width: 100%;
+    background: var(--accent);
+    color: var(--white);
+    padding: 12px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    z-index: 20;
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
+}
+
+.ticker-text {
+    display: inline-block;
+    animation: ticker 15s linear infinite;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.ticker-text span {
+    margin: 0 30px;
+}
+
+@keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
