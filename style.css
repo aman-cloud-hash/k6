@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap');
 
 :root {
-    --primary: #080A0F;
-    --secondary: #121620;
-    --accent: #FF4D00;
-    --accent-rgb: 255, 77, 0;
+    --primary: #F4F7F2;
+    --secondary: #EAEFE7;
+    --accent: #2E7D32;
+    --accent-rgb: 46, 125, 50;
     --white: #FFFFFF;
-    --text-muted: #A0A0B0;
-    --glass: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --gradient: linear-gradient(135deg, var(--accent), #FF8000);
+    --text-dark: #1A2315;
+    --text-muted: #5A6B55;
+    --glass: rgba(46, 125, 50, 0.05);
+    --glass-border: rgba(46, 125, 50, 0.15);
+    --gradient: linear-gradient(135deg, #2E7D32, #66BB6A);
     --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -27,7 +28,7 @@ html {
 
 body {
     background-color: var(--primary);
-    color: var(--white);
+    color: var(--text-dark);
     overflow-x: hidden !important;
     line-height: 1.6;
     width: 100%;
@@ -40,7 +41,7 @@ body {
     width: 8px;
 }
 ::-webkit-scrollbar-track {
-    background: var(--primary);
+    background: var(--secondary);
 }
 ::-webkit-scrollbar-thumb {
     background: var(--accent);
@@ -54,7 +55,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--primary);
+    background: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +77,7 @@ body {
 .loader-bar {
     width: 150px;
     height: 3px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(46, 125, 50, 0.15);
     position: relative;
     overflow: hidden;
     margin: 0 auto;
@@ -171,11 +172,12 @@ h2 span {
 .btn-outline {
     background: transparent;
     border: 2px solid var(--accent);
-    color: var(--white);
+    color: var(--accent);
 }
 
 .btn-outline:hover {
     background: var(--accent);
+    color: var(--white);
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(var(--accent-rgb), 0.3);
 }
@@ -197,18 +199,20 @@ h2 span {
 }
 
 .glass-card {
-    background: var(--glass);
+    background: var(--white);
     backdrop-filter: blur(15px);
     border: 1px solid var(--glass-border);
     border-radius: 24px;
     padding: 2.5rem;
     transition: var(--transition);
+    box-shadow: 0 4px 20px rgba(46, 125, 50, 0.08);
 }
 
 .glass-card:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 77, 0, 0.2);
+    background: var(--white);
+    border-color: rgba(46, 125, 50, 0.4);
     transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(46, 125, 50, 0.15);
 }
 
 /* Header */
@@ -222,11 +226,11 @@ header {
 }
 
 header.scrolled {
-    background: rgba(8, 10, 15, 0.85);
+    background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(20px);
     padding: 0.8rem 0;
     border-bottom: 1px solid var(--glass-border);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 20px rgba(46, 125, 50, 0.12);
 }
 
 nav {
@@ -238,7 +242,7 @@ nav {
 .logo {
     font-size: 1.5rem;
     font-weight: 800;
-    color: var(--white);
+    color: var(--text-dark);
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -275,10 +279,10 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--white);
+    color: var(--text-dark);
     font-weight: 600;
     transition: var(--transition);
-    opacity: 0.7;
+    opacity: 0.75;
     position: relative;
     padding-bottom: 5px;
 }
@@ -311,9 +315,9 @@ nav {
 
 .mobile-nav-toggle {
     display: none;
-    background: var(--glass);
+    background: var(--white);
     border: 1px solid var(--glass-border);
-    color: var(--white);
+    color: var(--text-dark);
     width: 45px;
     height: 45px;
     border-radius: 12px;
@@ -365,7 +369,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(8, 10, 15, 0.4), var(--primary));
+    background: linear-gradient(to bottom, rgba(244, 247, 242, 0.55), var(--primary));
     z-index: -1;
 }
 
@@ -384,8 +388,8 @@ nav {
     width: 100%;
     max-width: 550px;
     border-radius: 24px;
-    border: 1px solid var(--glass-border);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--glass-border);
+    box-shadow: 0 20px 50px rgba(46, 125, 50, 0.2);
     animation: float 6s infinite ease-in-out;
 }
 
@@ -429,6 +433,7 @@ nav {
     margin-bottom: 3rem;
     max-width: 600px;
     text-align: left !important;
+    font-weight: 500;
 }
 
 .hero-btns {
@@ -506,7 +511,7 @@ nav {
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
-    color: var(--white);
+    color: var(--text-dark);
 }
 
 .stat-item p {
@@ -520,7 +525,7 @@ nav {
 /* About Section */
 .about {
     padding: 8rem 0;
-    background: radial-gradient(circle at 80% 20%, rgba(var(--accent-rgb), 0.05), transparent 40%);
+    background: radial-gradient(circle at 80% 20%, rgba(var(--accent-rgb), 0.07), transparent 50%), var(--white);
 }
 
 .about-grid {
@@ -547,12 +552,12 @@ nav {
     gap: 15px;
     margin-bottom: 1rem;
     font-weight: 600;
-    color: var(--white);
+    color: var(--text-dark);
 }
 
 .feature-list li i {
-    color: var(--accent);
-    background: rgba(var(--accent-rgb), 0.1);
+    color: var(--white);
+    background: var(--accent);
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -570,7 +575,7 @@ nav {
     position: relative;
     border-radius: 30px;
     overflow: hidden;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    box-shadow: 0 20px 50px rgba(46, 125, 50, 0.2);
 }
 
 .image-wrapper img {
@@ -611,6 +616,8 @@ nav {
 .services {
     padding: 8rem 0;
     background: var(--secondary);
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
 }
 
 .section-header {
@@ -624,6 +631,7 @@ nav {
 .section-header p {
     color: var(--text-muted);
     font-size: 1.1rem;
+    font-weight: 500;
 }
 
 .service-card-wrapper {
@@ -639,7 +647,7 @@ nav {
     overflow: hidden;
     margin-bottom: 2rem;
     position: relative;
-    background: var(--primary);
+    background: var(--secondary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -678,6 +686,7 @@ nav {
 .service-body p {
     color: var(--text-muted);
     margin-bottom: 2rem;
+    font-weight: 500;
 }
 
 /* Instagram Feed */
@@ -721,7 +730,7 @@ blockquote.instagram-media {
 .insta-embed {
     width: 100%;
     max-width: 400px;
-    background: var(--glass);
+    background: var(--white);
     border-radius: 20px;
     overflow: hidden;
     border: 1px solid var(--glass-border);
@@ -730,6 +739,7 @@ blockquote.instagram-media {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow: 0 4px 20px rgba(46, 125, 50, 0.08);
 }
 
 .insta-embed:hover {
@@ -779,6 +789,7 @@ blockquote.instagram-media {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 500;
 }
 
 .cta-btns {
@@ -790,8 +801,8 @@ blockquote.instagram-media {
 /* Footer */
 footer {
     padding: 8rem 0 3rem;
-    background: #05060A;
-    border-top: 1px solid var(--glass-border);
+    background: #1A2315;
+    border-top: 1px solid rgba(46, 125, 50, 0.3);
 }
 
 .footer-grid {
@@ -820,14 +831,14 @@ footer {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background: var(--glass);
+    background: rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--white);
     text-decoration: none;
     transition: var(--transition);
-    border: 1px solid var(--glass-border);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .social-btn:hover {
@@ -909,7 +920,7 @@ footer {
         right: -100%;
         width: 80%;
         height: 100vh;
-        background: rgba(8, 10, 15, 0.98);
+        background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(20px);
         flex-direction: column;
         justify-content: center;
@@ -917,6 +928,7 @@ footer {
         transition: var(--transition);
         z-index: 1000;
         display: flex !important;
+        box-shadow: -10px 0 40px rgba(46, 125, 50, 0.15);
     }
 
     .nav-links.active {
