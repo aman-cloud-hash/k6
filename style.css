@@ -486,7 +486,7 @@ nav {
 
 /* Stats Section */
 .stats {
-    padding: 4rem 0 8rem;
+    padding: 3rem 0;
     position: relative;
     z-index: 10;
 }
@@ -524,7 +524,7 @@ nav {
 
 /* About Section */
 .about {
-    padding: 8rem 0;
+    padding: 4rem 0;
     background: radial-gradient(circle at 80% 20%, rgba(var(--accent-rgb), 0.07), transparent 50%), var(--white);
 }
 
@@ -614,7 +614,7 @@ nav {
 
 /* Services */
 .services {
-    padding: 8rem 0;
+    padding: 4rem 0;
     background: var(--secondary);
     border-top: 1px solid var(--glass-border);
     border-bottom: 1px solid var(--glass-border);
@@ -622,7 +622,7 @@ nav {
 
 .section-header {
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -756,12 +756,12 @@ blockquote.instagram-media {
 
 /* CTA Section */
 .cta-section {
-    padding: 8rem 0;
+    padding: 4rem 0;
 }
 
 .cta-card {
     text-align: center;
-    padding: 5rem;
+    padding: 3rem;
     border: 1px solid rgba(var(--accent-rgb), 0.3);
     overflow: hidden;
     position: relative;
@@ -800,7 +800,7 @@ blockquote.instagram-media {
 
 /* Footer */
 footer {
-    padding: 8rem 0 3rem;
+    padding: 4rem 0 2rem;
     background: #1A2315;
     border-top: 1px solid rgba(46, 125, 50, 0.3);
 }
